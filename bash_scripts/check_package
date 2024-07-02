@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#check python
+
+check_pyfiglet=python3 -m pip install pyfiglet
+
+if $check_pyfiglet "WARNING: Package(s) not found: pyfiglet"
+    then python3 -m pip install pyfiglet
+    else echo "pyfiglet already installed"
+fi 
+
+
