@@ -1,3 +1,18 @@
+#check and install pyfiglet
+import subprocess
+import sys
+
+def check_pyfiglet_installed():
+    try:
+        import pyfiglet
+        print("pyfiglet is already installed.")
+    except ImportError:
+        print("pyfiglet is not installed. Installing now...")
+        # Using sys.executable to ensure the current Python interpreter is used
+        subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pyfiglet'])
+
+check_pyfiglet_installed()
+
 #import all necessary modules
 import pyfiglet
 import sys
